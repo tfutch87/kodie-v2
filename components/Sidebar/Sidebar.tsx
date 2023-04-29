@@ -1,7 +1,7 @@
 import { IconFolderPlus, IconMistOff, IconPlus } from '@tabler/icons-react';
 import { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
-import {Image} from './components/Logo';
+import Image from 'next/image'
 
 import {
   CloseSidebarButton,
@@ -58,12 +58,18 @@ const Sidebar = <T,>({
   return isOpen ? (
     <div>
    
+  
       <div
         className={`fixed top-0 ${side}-0 z-40 flex h-full w-[260px] flex-none flex-col space-y-2 bg-[#202123] p-2 text-[14px] transition-all sm:relative sm:top-0`}
       >
-           <div className="m-auto">
-    <Image src="https://frontendthinkers.com/wp-content/uploads/2023/03/FTLogo.svg" alt="frontend thinkers logo" width={50} height={50} className="my-image" />
-      </div>
+     
+
+      {side === 'left' ? (
+        <Image src="/screenshots/FETlongLogoWhite.svg" className="m-auto" alt="frontend thinkers logo" width={200} height={200} />
+      ) : (
+        ''
+      )}
+
         <div className="flex items-center">
           <button
             className="text-sidebar flex w-[190px] flex-shrink-0 cursor-pointer select-none items-center gap-3 rounded-md border border-white/20 p-3 text-white transition-colors duration-200 hover:bg-gray-500/10"

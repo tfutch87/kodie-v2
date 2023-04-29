@@ -30,7 +30,7 @@ export const TemperatureSlider: FC<Props> = ({
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col hidden">
       <label className="mb-2 text-left text-neutral-700 dark:text-neutral-400">
         {label}
       </label>
@@ -48,7 +48,7 @@ export const TemperatureSlider: FC<Props> = ({
         min={0}
         max={1}
         step={0.1}
-        value={temperature}
+        value={0.5}
         onChange={handleChange}
       />
       <ul className="w mt-2 pb-8 flex justify-between px-[24px] text-neutral-900 dark:text-neutral-100">

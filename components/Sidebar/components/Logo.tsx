@@ -1,3 +1,4 @@
+
 // Define type interface for image props
 interface ImageProps {
     src: string;
@@ -10,7 +11,7 @@ interface ImageProps {
   // Create image component
   export const Image = ({ src, alt, width = 200, height = 200, className = '' }: ImageProps) => {
     return (
-      <img
+      <Image
         src={src}
         alt={alt}
         width={width}
